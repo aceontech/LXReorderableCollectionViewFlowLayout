@@ -426,8 +426,8 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         } break;
     }
 
-    if ([self.delegate respondsToSelector:@selector(collectionView:layout:panOccurred:)]) {
-        [self.delegate collectionView:self.collectionView layout:self panOccurred:gestureRecognizer];
+    if ([self.delegate respondsToSelector:@selector(collectionView:layout:panOccurred:withCurrentView:)]) {
+        [self.delegate collectionView:self.collectionView layout:self panOccurred:gestureRecognizer withCurrentView:self.currentView];
     }
 }
 
